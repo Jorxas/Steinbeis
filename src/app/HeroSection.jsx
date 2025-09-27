@@ -78,9 +78,9 @@ const HeroSection = () => {
               {/* Contact Button */}
           <div className="w-full lg:w-auto">
             <Button
-              variant="primary"
+              variant="secondary"
               size="md"
-              className="w-full lg:w-auto px-6 py-3 bg-white text-black shadow-[0px_2px_4px_#06394014] rounded-full"
+              className="w-auto px-6 py-3 shadow-[0px_2px_4px_#06394014] font-bold font-['Manrope']"
               onClick={() => {
                 console.log('Contact button clicked')
               }}
@@ -110,9 +110,9 @@ const HeroSection = () => {
           {/* CTA Button */}
           <div className="mt-8 sm:mt-9 lg:mt-[32px] ml-4 sm:ml-8 lg:ml-[100px]">
             <Button
-              variant="primary"
+              variant="dark"
               size="md"
-              className="gap-[10px] px-[34px] pr-[50px] py-[14px] flex items-center justify-center hover:bg-primary-dark transition-colors duration-200"
+              className="gap-[10px] px-[34px] pr-[50px] py-[14px] flex items-center justify-center transition-colors duration-200"
               onClick={handleGetQuote}
             >
               <span>Jetzt Angebot einholen</span>

@@ -78,9 +78,9 @@ const ServicesSection = () => {
           {/* Contact Button */}
           <div className="mt-8 lg:mt-[44px]">
           <Button
-            variant="primary"
+            variant="dark"
             size="md"
-            className="gap-[6px] px-[34px] pr-[50px] py-[14px] flex items-center justify-center hover:bg-primary-dark transition-colors duration-200"
+            className="gap-[6px] px-[34px] pr-[50px] py-[14px] flex items-center justify-center"
             onClick={handleContactClick}
           >
             <span>Kontakt aufnehmen</span>

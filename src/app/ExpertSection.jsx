@@ -53,7 +53,7 @@ const ExpertSection = () => {
             <Button
               variant="dark"
               size="md"
-              className="gap-[10px] px-[34px] pr-[50px] py-[14px] flex items-center justify-center shadow-[0px_2px_4px_#06394014]"
+              className="gap-[10px] px-[34px] pr-[50px] py-[14px] flex items-center justify-center shadow-[0px_2px_4px_#06394014] bg-background-dark text-white"
               onClick={handleLearnMore}
             >
               <span>Mehr über Christoph Wagener</span>
