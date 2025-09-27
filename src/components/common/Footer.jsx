@@ -120,7 +120,7 @@ const Footer = () => {
                       position="relative"
                       layout_gap="gap-[10px]"
                       margin=""
-                      variant="primary"
+                      variant="dark"
                       size="medium"
                       onClick={handleSubmit}
                     >
