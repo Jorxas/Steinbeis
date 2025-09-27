@@ -6,7 +6,7 @@
 // - size: 'sm' | 'md' | 'lg'
 // - onClick, disabled, className, type, children
 
-const baseClasses = 'inline-flex items-center justify-center font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed rounded-xl';
+const baseClasses = 'inline-flex items-center justify-center font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed rounded-full';
 
 const variantClasses = {
   primary: 'bg-primary-background text-primary-foreground hover:bg-primary-dark focus:ring-primary-light',
