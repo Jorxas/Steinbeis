@@ -61,28 +61,16 @@ const Header = () => {
               {/* Contact Button */}
               <div className="w-full lg:w-auto">
                 <Button
-                  text="Kontakt"
-                  text_font_size="text-base"
-                  text_font_family="Manrope"
-                  text_font_weight="font-bold"
-                  text_line_height="leading-base"
-                  text_color="text-text-primary"
-                  fill_background_color="bg-background-card"
-                  border_border_radius="rounded-lg"
-                  effect_box_shadow="shadow-[0px_2px_4px_#06394014]"
-                  className="w-full lg:w-auto px-4 py-[6px]"
-                  layout_width="auto"
-                  padding="px-4 py-[6px]"
-                  position="relative"
-                  layout_gap="0"
-                  margin="0"
-                  variant="primary"
-                  size="medium"
+                  variant="secondary"
+                  size="md"
+                  className="w-auto px-6 py-[6px] shadow-[0px_2px_4px_#06394014] font-bold font-['Manrope']"
                   onClick={() => {
                     // Handle contact button click
                     console.log('Contact button clicked')
                   }}
-                />
+                >
+                  Kontakt
+                </Button>
               </div>
             </div>
           </nav>
