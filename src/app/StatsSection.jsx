@@ -29,7 +29,7 @@ const StatsSection = () => {
   ]
 
   return (
-    <section className="w-full bg-background-card mt-[50px]">
+    <section id="numbers" className="w-full bg-background-card mt-[50px]">
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 py-[40px] sm:py-[45px] lg:py-[50px]">
         <div className="flex flex-col gap-10 sm:gap-12 lg:gap-[52px] justify-start items-center w-full">
           {/* Section Header */}
@@ -45,7 +45,7 @@ const StatsSection = () => {
             
             <div className="w-full lg:w-[26%] mt-1 lg:mt-[4px]">
               <Image
-                src="/images/img_125992_logo_sbz_2522.png"
+                src="/images/logo_sbz_2522 1.svg"
                 alt="Steinbeis Logo"
                 width={338}
                 height={42}
