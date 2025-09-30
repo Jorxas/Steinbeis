@@ -38,14 +38,14 @@ const ServicesSection = () => {
   ]
 
   const handleContactClick = () => {
-    const contactSection = document.getElementById('contact')
+    const contactSection = document.getElementById('kontakt')
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
   return (
-    <section className="w-full bg-background-card mt-[50px]">
+    <section id="services" className="w-full bg-background-card mt-[50px]">
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[98px] py-[50px] sm:py-[58px] lg:py-[66px]">
         <div className="flex flex-col gap-8 sm:gap-10 lg:gap-[44px] justify-start items-start w-full max-w-[1242px]">
           {/* Section Header */}
@@ -85,7 +85,7 @@ const ServicesSection = () => {
           >
             <span>Kontakt aufnehmen</span>
             <Image
-              src="/images/img_arrowright.svg"
+              src="/images/arrowright.svg"
               alt="Arrow right"
               width={16}
               height={16}
