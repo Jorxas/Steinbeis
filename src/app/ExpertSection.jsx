@@ -25,7 +25,7 @@ const ExpertSection = () => {
               <div className="flex flex-col sm:flex-row lg:flex-row justify-start items-start lg:items-center w-full">
                 <div className="flex flex-col sm:flex-row lg:flex-row gap-6 sm:gap-7 lg:gap-[32px] justify-start items-start lg:items-center w-full">
                   <Image
-                    src="/images/img_ellipse_72.png"
+                    src="/images/ellipse_72.png"
                     alt="Christoph Wagener"
                     width={96}
                     height={96}
@@ -58,7 +58,7 @@ const ExpertSection = () => {
             >
               <span>Mehr über Christoph Wagener</span>
               <Image
-                src="/images/img_arrowright.svg"
+                src="/images/arrowright.svg"
                 alt="Arrow right"
                 width={16}
                 height={16}
