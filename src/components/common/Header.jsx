@@ -1,10 +1,35 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
 import Button from '../ui/Button';
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const navigationItems = [
+    { href: '#services', label: 'Dienstleistungen' },
+    { href: '#certification', label: 'Zertifizierung' },
+    { href: '#numbers', label: 'Zahlen' }
+  ];
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const elementId = href.replace('#', '');
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setMenuOpen(false);
+    }
+  };
+
+  const handleContactClick = () => {
+    const contactElement = document.getElementById('kontakt');
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: 'smooth' });
+      setMenuOpen(false);
+    }
+  };
 
   return (
     <header className="w-full bg-background-card">
@@ -13,7 +38,7 @@ const Header = () => {
           {/* Logo */}
           <div className="w-full sm:w-auto lg:w-[28%]">
             <Image
-              src="/images/img_125992_logo_sbz_2522.png"
+              src="/images/logo_sbz_25221.svg"
               alt="Company Logo"
               width={338}
               height={42}
@@ -24,50 +49,41 @@ const Header = () => {
 
           {/* Hamburger Menu Icon (Mobile only) */}
           <button 
-            className="block lg:hidden p-2" 
-            aria-label="Open menu"
+            className="block lg:hidden p-2 transition-transform duration-200 hover:scale-110" 
+            aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"}
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            {menuOpen ? (
+              <X className="w-6 h-6 text-text-primary" />
+            ) : (
+              <Menu className="w-6 h-6 text-text-primary" />
+            )}
           </button>
 
-          {/* Navigation Menu */}
-          <nav className={`${menuOpen ? 'block' : 'hidden'} lg:block absolute lg:relative top-full lg:top-auto left-0 lg:left-auto w-full lg:w-[66%] bg-background-card lg:bg-transparent shadow-lg lg:shadow-none z-50 lg:z-auto`}>
-            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center p-4 lg:p-0 mr-0 lg:mr-[26px]">
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:block w-[66%]">
+            <div className="flex flex-row justify-between items-center mr-[26px]">
               {/* Navigation Links */}
-              <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full lg:w-[46%] space-y-4 lg:space-y-0 mb-4 lg:mb-[4px]">
-                <a 
-                  href="#services" 
-                  className="text-base font-bold leading-base text-text-primary font-['Manrope'] hover:text-primary-background transition-colors"
-                >
-                  Dienstleistungen
-                </a>
-                <a 
-                  href="#certification" 
-                  className="text-base font-bold leading-base text-text-primary font-['Manrope'] hover:text-primary-background transition-colors"
-                >
-                  Zertifizierung
-                </a>
-                <a 
-                  href="#numbers" 
-                  className="text-base font-bold leading-base text-text-primary font-['Manrope'] hover:text-primary-background transition-colors"
-                >
-                  Zahlen
-                </a>
+              <div className="flex flex-row justify-between items-center w-[46%] mb-[4px]">
+                {navigationItems.map((item) => (
+                  <a 
+                    key={item.href}
+                    href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
+                    className="text-base font-bold leading-base text-text-primary font-['Manrope'] hover:text-primary-background transition-colors cursor-pointer"
+                  >
+                    {item.label}
+                  </a>
+                ))}
               </div>
 
               {/* Contact Button */}
-              <div className="w-full lg:w-auto">
+              <div className="w-auto">
                 <Button
                   variant="secondary"
                   size="md"
                   className="w-auto px-6 py-[6px] shadow-[0px_2px_4px_#06394014] font-bold font-['Manrope']"
-                  onClick={() => {
-                    // Handle contact button click
-                    console.log('Contact button clicked')
-                  }}
+                  onClick={handleContactClick}
                 >
                   Kontakt
                 </Button>
@@ -75,6 +91,34 @@ const Header = () => {
             </div>
           </nav>
         </div>
+
+        {/* Mobile Menu */}
+        {menuOpen && (
+          <div className="lg:hidden bg-primary-light shadow-lg border-t-2 border-primary-background animate-slideDown">
+            <div className="py-4 space-y-2">
+              {navigationItems.map((item) => (
+                <a 
+                  key={item.href}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="block text-base font-bold text-secondary-dark font-['Manrope'] hover:text-primary-background hover:bg-white/50 transition-all duration-200 py-3 px-3 rounded-lg cursor-pointer"
+                >
+                  {item.label}
+                </a>
+              ))}
+              <div className="pt-2">
+                <Button
+                  variant="dark"
+                  size="md"
+                  className="w-full font-bold font-['Manrope']"
+                  onClick={handleContactClick}
+                >
+                  Kontakt
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   )
