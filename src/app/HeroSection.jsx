@@ -1,16 +1,40 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
 import Button from '../components/ui/Button';
 
 const HeroSection = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const navigationItems = [
+    { href: '#services', label: 'Dienstleistungen' },
+    { href: '#certification', label: 'Zertifizierung' },
+    { href: '#numbers', label: 'Zahlen' }
+  ];
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const elementId = href.replace('#', '');
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setMenuOpen(false);
+    }
+  };
+
+  const handleContactClick = () => {
+    const contactElement = document.getElementById('kontakt');
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: 'smooth' });
+      setMenuOpen(false);
+    }
+  };
 
   const handleGetQuote = () => {
-    // Scroll to contact section
-    const contactSection = document.getElementById('contact')
+    const contactSection = document.getElementById('kontakt');
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' })
+      contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   }
 
@@ -18,19 +42,19 @@ const HeroSection = () => {
     <section 
       className="w-full relative min-h-[600px] sm:min-h-[700px] lg:min-h-[900px]"
       style={{
-        backgroundImage: "url('/images/img_.png')",
+        backgroundImage: "url('/images/Header.svg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
     >
       {/* Navigation Header */}
-      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[96px] relative z-10">
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[96px] relative z-50">
         <div className="flex justify-between items-center py-6 sm:py-8 lg:py-[32px]">
           {/* Logo */}
           <div className="w-full sm:w-auto lg:w-[28%]">
             <Image
-              src="/images/img_125992_logo_sbz_2522.png"
+              src="/images/logo_sbz_2522 1.svg"
               alt="Company Logo"
               width={338}
               height={42}
@@ -42,55 +66,74 @@ const HeroSection = () => {
           {/* Hamburger Menu Icon (Mobile only) */}
           <button 
             className="block lg:hidden p-2" 
-            aria-label="Open menu"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            {menuOpen ? (
+              <X className="w-6 h-6 text-white" />
+            ) : (
+              <Menu className="w-6 h-6 text-white" />
+            )}
           </button>
 
-          {/* Navigation Menu */}
-          <nav className={`${menuOpen ? 'block' : 'hidden'} lg:block absolute lg:relative top-full lg:top-auto left-0 lg:left-auto w-full lg:w-[66%] bg-background-card lg:bg-transparent shadow-lg lg:shadow-none z-50 lg:z-auto`}>
-            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center p-4 lg:p-0 mr-0 lg:mr-[26px]">
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:block w-[66%]">
+            <div className="flex flex-row justify-between items-center mr-[26px]">
               {/* Navigation Links */}
-              <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full lg:w-[46%] space-y-4 lg:space-y-0 mb-4 lg:mb-[4px]">
-                <a 
-                  href="#services" 
-                  className="text-base font-bold leading-base text-white lg:text-text-primary font-['Manrope'] hover:text-primary-background transition-colors"
-                >
-                  Dienstleistungen
-                </a>
-                <a 
-                  href="#certification" 
-                  className="text-base font-bold leading-base text-white lg:text-text-primary font-['Manrope'] hover:text-primary-background transition-colors"
-                >
-                  Zertifizierung
-                </a>
-                <a 
-                  href="#numbers" 
-                  className="text-base font-bold leading-base text-white lg:text-text-primary font-['Manrope'] hover:text-primary-background transition-colors"
-                >
-                  Zahlen
-                </a>
+              <div className="flex flex-row justify-between items-center w-[46%] mb-[4px]">
+                {navigationItems.map((item) => (
+                  <a 
+                    key={item.href}
+                    href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
+                    className="text-base font-bold leading-base text-white font-['Manrope'] hover:text-primary-light transition-colors cursor-pointer"
+                  >
+                    {item.label}
+                  </a>
+                ))}
               </div>
 
               {/* Contact Button */}
-          <div className="w-full lg:w-auto">
-            <Button
-              variant="secondary"
-              size="md"
-              className="w-auto px-6 py-3 shadow-[0px_2px_4px_#06394014] font-bold font-['Manrope']"
-              onClick={() => {
-                console.log('Contact button clicked')
-              }}
-            >
-              Kontakt
-            </Button>
-          </div>
+              <div className="w-auto">
+                <Button
+                  variant="secondary"
+                  size="md"
+                  className="w-auto px-6 py-[6px] shadow-[0px_2px_4px_#06394014] font-bold font-['Manrope']"
+                  onClick={handleContactClick}
+                >
+                  Kontakt
+                </Button>
+              </div>
             </div>
           </nav>
         </div>
+
+        {/* Mobile Menu */}
+        {menuOpen && (
+          <div className="lg:hidden bg-primary-light w-full py-4">
+            <div className="px-4 sm:px-6">
+              {navigationItems.map((item) => (
+                <a 
+                  key={item.href}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="block text-base font-bold text-secondary-dark py-3 border-b border-white/30 last:border-0"
+                >
+                  {item.label}
+                </a>
+              ))}
+              <div className="pt-3">
+                <Button
+                  variant="dark"
+                  size="md"
+                  className="w-full"
+                  onClick={handleContactClick}
+                >
+                  Kontakt
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Main Content */}
@@ -117,7 +160,7 @@ const HeroSection = () => {
             >
               <span>Jetzt Angebot einholen</span>
               <Image
-                src="/images/img_arrowright.svg"
+                src="/images/arrowright.svg"
                 alt="Arrow right"
                 width={16}
                 height={16}
@@ -130,7 +173,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row justify-start items-start lg:items-center w-full mt-[80px] sm:mt-[100px] lg:mt-[134px] mx-4 sm:mx-8 lg:mx-[110px] mb-[40px] sm:mb-[50px] lg:mb-[68px]">
             <div className="mb-4 sm:mb-0 sm:mr-6">
               <Image
-                src="/images/img_wagener_christo.png"
+                src="/images/wagener_christo.png"
                 alt="Wagener Christo"
                 width={154}
                 height={154}
@@ -140,7 +183,7 @@ const HeroSection = () => {
             
             <div className="flex flex-col gap-1 lg:gap-[4px] justify-start items-start px-4 sm:px-6 lg:px-[28px] mb-0 lg:mb-[16px]">
               <Image
-                src="/images/img_bildschirmfoto_2025_02_03.png"
+                src="/images/bildschirmfoto_2025_02_03.svg"
                 alt="University Logo"
                 width={188}
                 height={82}
