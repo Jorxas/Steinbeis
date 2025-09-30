@@ -28,9 +28,10 @@ const Footer = () => {
     <footer className="w-full mt-[90px]">
       {/* Contact Form Section */}
       <section 
+        id="kontakt"
         className="w-full relative"
         style={{
-          backgroundImage: "url('/images/img_beautifulalternativeenergyplantwithsolarpanels_1.png')",
+          backgroundImage: "url('/images/kontakt.svg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -126,7 +127,7 @@ const Footer = () => {
                     >
                       <span>Senden</span>
                       <Image
-                        src="/images/img_arrowright.svg"
+                        src="/images/arrowright.svg"
                         alt="Arrow right"
                         width={16}
                         height={16}
@@ -151,7 +152,7 @@ const Footer = () => {
               <div className="flex flex-col justify-start items-start w-full lg:w-[24%] mb-8 lg:mb-0">
                 <div className="mr-0 lg:mr-[30px] mb-8 sm:mb-12 lg:mb-[62px]">
                   <Image
-                    src="/images/img_125992_logo_sbz_2522.png"
+                    src="/images/logo_sbz_25221.svg"
                     alt="Company Logo"
                     width={278}
                     height={34}
@@ -161,14 +162,14 @@ const Footer = () => {
 
                 <div className="flex flex-col sm:flex-row lg:flex-row gap-4 sm:gap-5 lg:gap-[20px] justify-start items-start lg:items-center w-full mb-8 sm:mb-12 lg:mb-[54px]">
                   <Image
-                    src="/images/img_wagener_christo.png"
+                    src="/images/wagener_christo.png"
                     alt="Wagener Christo"
                     width={100}
                     height={100}
                     className="w-[80px] sm:w-[90px] lg:w-[100px] h-[80px] sm:h-[90px] lg:h-[100px] rounded-lg"
                   />
                   <Image
-                    src="/images/img_bildschirmfoto_2025_02_03.png"
+                    src="/images/bildschirmfoto_2025_02_03.svg"
                     alt="Screenshot"
                     width={154}
                     height={66}
@@ -183,14 +184,14 @@ const Footer = () => {
                 <div className="flex flex-col sm:flex-row lg:flex-row justify-start items-start lg:items-center w-full gap-4 lg:gap-0">
                   <div className="w-[22px] h-[22px] bg-accent-color rounded-base"></div>
                   <Image
-                    src="/images/img_vector.svg"
+                    src="/images/vector.svg"
                     alt="Vector"
                     width={100}
                     height={20}
                     className="w-[80px] sm:w-[100px] h-[16px] sm:h-[20px] ml-0 lg:ml-4"
                   />
                   <Image
-                    src="/images/img_luckycloud_logo.svg"
+                    src="/images/luckycloud_logo.svg"
                     alt="Lucky Cloud Logo"
                     width={130}
                     height={30}
@@ -260,7 +261,7 @@ const Footer = () => {
                   <div className="flex items-center gap-4 ml-0 lg:ml-[38px]">
                     <a href="#instagram" className="hover:opacity-75 transition-opacity">
                       <Image
-                        src="/images/img_instagramlogo.svg"
+                        src="/images/instagramlogo.svg"
                         alt="Instagram"
                         width={24}
                         height={24}
@@ -269,7 +270,7 @@ const Footer = () => {
                     </a>
                     <a href="#facebook" className="hover:opacity-75 transition-opacity">
                       <Image
-                        src="/images/img_facebooklogo.svg"
+                        src="/images/facebooklogo.svg"
                         alt="Facebook"
                         width={24}
                         height={24}
@@ -278,7 +279,7 @@ const Footer = () => {
                     </a>
                     <a href="#linkedin" className="hover:opacity-75 transition-opacity">
                       <Image
-                        src="/images/img_linkedinlogo.svg"
+                        src="/images/linkedinlogo.svg"
                         alt="LinkedIn"
                         width={24}
                         height={24}
