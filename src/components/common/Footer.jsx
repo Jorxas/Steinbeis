@@ -105,24 +105,10 @@ const Footer = () => {
                   {/* Submit Button */}
                   <div className="mt-[36px] mb-[4px]">
                     <Button
-                      text="Senden"
-                      text_font_size="text-base"
-                      text_font_family="Manrope"
-                      text_font_weight="font-bold"
-                      text_line_height="leading-base"
-                      text_color="text-primary-foreground"
-                      fill_background_color="bg-background-dark"
-                      border_border_radius="rounded-xl"
-                      effect_box_shadow="shadow-[0px_2px_4px_#06394014]"
+                      variant="dark"
+                      size="md"
                       className="w-full gap-[10px] px-[34px] pr-[50px] py-[14px] flex items-center justify-center"
                       type="submit"
-                      layout_width="w-full"
-                      padding="px-[34px] pr-[50px] py-[14px]"
-                      position="relative"
-                      layout_gap="gap-[10px]"
-                      margin=""
-                      variant="dark"
-                      size="medium"
                       onClick={handleSubmit}
                     >
                       <span>Senden</span>
