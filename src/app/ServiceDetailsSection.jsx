@@ -8,28 +8,28 @@ const ServiceDetailsSection = () => {
       id: 1,
       title: "Wertermittlung und Baukostenplanung",
       description: "Commodo lorem est amet urna. Amet bibendum pharetra urna at tortor pulvinar. Cras sit dictumst consequat non. Congue facilisi orci etiam enim id donec. Rhoncus id nisl ultrices ac pharetra tellus placerat.",
-      image: "/images/img_pexels_pixabay_162539.png",
+      image: "/images/pexels_pixabay_162539.png",
       imagePosition: "left"
     },
     {
       id: 2,
       title: "Nachhaltiges Bauen",
       description: "Commodo lorem est amet urna. Amet bibendum pharetra urna at tortor pulvinar. Cras sit dictumst consequat non. Congue facilisi orci etiam enim id donec. Rhoncus id nisl ultrices ac pharetra tellus placerat.",
-      image: "/images/img_pexels_pixabay_162539.png",
+      image: "/images/pexels-pixabay-162539 1.jpg",
       imagePosition: "right"
     },
     {
       id: 3,
       title: "Professur für Bau- und Immobilienwirtschaft",
       description: "Commodo lorem est amet urna. Amet bibendum pharetra urna at tortor pulvinar. Cras sit dictumst consequat non. Congue facilisi orci etiam enim id donec. Rhoncus id nisl ultrices ac pharetra tellus placerat.",
-      image: "/images/img_pexels_pixabay_162539.png",
+      image: "/images/pexels-pixabay-1625392.png",
       imagePosition: "left"
     },
     {
       id: 4,
       title: "Risk Engineering",
       description: "Commodo lorem est amet urna. Amet bibendum pharetra urna at tortor pulvinar. Cras sit dictumst consequat non. Congue facilisi orci etiam enim id donec. Rhoncus id nisl ultrices ac pharetra tellus placerat.",
-      image: "/images/img_pexels_pixabay_162539.png",
+      image: "/images/pexels-pixabay-1625393.png",
       imagePosition: "right"
     }
   ]

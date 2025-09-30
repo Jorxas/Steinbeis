@@ -31,13 +31,6 @@ const HeroSection = () => {
     }
   };
 
-  const handleGetQuote = () => {
-    const contactSection = document.getElementById('kontakt');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
   return (
     <section 
       className="w-full relative min-h-[600px] sm:min-h-[700px] lg:min-h-[900px]"
@@ -156,7 +149,7 @@ const HeroSection = () => {
               variant="dark"
               size="md"
               className="gap-[10px] px-[34px] pr-[50px] py-[14px] flex items-center justify-center transition-colors duration-200"
-              onClick={handleGetQuote}
+              onClick={handleContactClick}
             >
               <span>Jetzt Angebot einholen</span>
               <Image

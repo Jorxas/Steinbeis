@@ -9,7 +9,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="de">
       <body className="w-full min-h-screen overflow-x-hidden">{children}</body>
     </html>
   )

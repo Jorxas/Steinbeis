@@ -22,8 +22,7 @@ const StatsSection = () => {
     },
     {
       id: 4,
-      number: "159,7",
-      numberSuffix: "Millionen Euro",
+      number: "159,7 Millionen Euro",
       label: "Gesamtumsatz"
     }
   ]
@@ -63,11 +62,6 @@ const StatsSection = () => {
               >
                 <div className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight sm:leading-tight lg:leading-8xl text-text-primary font-['Albert_Sans']">
                   {stat.number}
-                  {stat.numberSuffix && (
-                    <span className="text-lg font-bold leading-8xl text-text-primary font-['Albert_Sans'] ml-1">
-                      {stat.numberSuffix}
-                    </span>
-                  )}
                 </div>
                 
                 <Line width="230px" height="1px" className="w-full" />
