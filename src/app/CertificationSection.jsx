@@ -1,15 +1,14 @@
-'use client';
 import Image from'next/image';
 
 const CertificationSection = () => {
   return (
-    <section className="w-full bg-background-card">
+    <section id="certification" className="w-full bg-background-card">
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[56px] py-[60px] sm:py-[80px] lg:py-[106px]">
         <div className="flex flex-col lg:flex-row justify-between items-center w-full lg:w-[92%] mx-auto">
           {/* Certification Image */}
           <div className="w-full lg:w-[282px] mb-8 lg:mb-0">
             <Image
-              src="/images/img_wagener_christo.png"
+              src="/images/wagener_christo.png"
               alt="Certification Badge"
               width={282}
               height={282}
