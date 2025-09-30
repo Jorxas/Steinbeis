@@ -9,8 +9,8 @@ import CertificationSection from './CertificationSection';
 
 const HomePage = () => {
   return (
-    <>
-      <main>
+    <div className="w-full min-h-screen">
+      <main className="w-full">
         <HeroSection />
         <ServicesSection />
         <StatsSection />
@@ -19,7 +19,7 @@ const HomePage = () => {
         <ServiceDetailsSection />
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 
