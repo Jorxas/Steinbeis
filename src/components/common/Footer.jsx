@@ -152,7 +152,7 @@ const Footer = () => {
               <div className="flex flex-col justify-start items-start w-full lg:w-[24%] mb-8 lg:mb-0">
                 <div className="mr-0 lg:mr-[30px] mb-8 sm:mb-12 lg:mb-[62px]">
                   <Image
-                    src="/images/logo_sbz_25221.svg"
+                    src="/images/logo_sbz_2522 1.svg"
                     alt="Company Logo"
                     width={278}
                     height={34}
