@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Steinbeis Beratungszentrum - Bau- und Immobilienökonomie
 
-## Getting Started
+Professionelle Website für das Steinbeis Beratungszentrum, spezialisiert auf Bau- und Immobilienökonomie.
 
-First, run the development server:
+## 🎯 Über das Projekt
+
+Moderne Unternehmenswebsite zur Präsentation der Beratungsdienstleistungen des Steinbeis Beratungszentrums im Bereich Bau und Immobilien, mit Expertise in Bauprojektmanagement, Immobilienbewertung und Risk Engineering.
+
+## 🚀 Verwendete Technologien
+
+- **Framework**: Next.js 14.2.0
+- **React**: 18.2.0
+- **Styling**: Tailwind CSS 3.4.17
+- **Icons**: Lucide React 0.544.0
+- **Sprache**: JavaScript (JSX)
+- **Schriftarten**: Google Fonts (Manrope, Albert Sans, DM Sans, Red Hat Display)
+
+## 🛠️ Installation
+
+### Voraussetzungen
+
+- Node.js (Version 18+)
+- npm oder yarn
+
+### Installationsschritte
+
+1. **Projekt klonen**
+   ```bash
+   git clone <repository-url>
+   cd steinbeis-2
+   ```
+
+2. **Abhängigkeiten installieren**
+   ```bash
+   npm install
+   ```
+
+3. **Entwicklungsserver starten**
+   ```bash
+   npm run dev
+   ```
+
+4. **Im Browser öffnen**
+   ```
+   http://localhost:3001
+   ```
+
+## 📜 Verfügbare Skripte
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev      # Startet den Entwicklungsserver auf Port 3001
+npm run build    # Erstellt eine optimierte Produktionsversion
+npm run start    # Startet den Produktionsserver
+npm run lint     # Prüft den Code mit ESLint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Funktionen
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Responsive Navigation
+- **Desktop**: Horizontale Navigation mit Links und Kontakt-Button
+- **Mobile**: Hamburger-Menü mit Toggle (Menu ↔ X Icons)
+- **Smooth Scroll**: Sanftes Scrollen zu den Abschnitten
+- **Auto-Schließung**: Das mobile Menü schließt sich automatisch nach einem Klick
