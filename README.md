@@ -1,63 +1,30 @@
-# Steinbeis Beratungszentrum - Bau- und Immobilienökonomie
+# Steinbeis Beratungszentrum
 
-Professionelle Website für das Steinbeis Beratungszentrum, spezialisiert auf Bau- und Immobilienökonomie.
+Eine responsive Website für das Steinbeis Beratungszentrum im Bereich Bau- und Immobilienökonomie. Das Projekt stellt Leistungen und Fachgebiete übersichtlich vor und führt Besucherinnen und Besucher vom ersten Überblick zu den einzelnen Themen und Kontaktmöglichkeiten.
 
-## 🎯 Über das Projekt
+## Umsetzung
 
-Moderne Unternehmenswebsite zur Präsentation der Beratungsdienstleistungen des Steinbeis Beratungszentrums im Bereich Bau und Immobilien, mit Expertise in Bauprojektmanagement, Immobilienbewertung und Risk Engineering.
+Die Seite besteht aus einem Hero-Bereich, Leistungsübersichten, Kennzahlen, Informationen zur Expertise, Zertifizierungen und detaillierteren Leistungsabschnitten. Die Navigation ist für Desktop und Mobilgeräte ausgelegt; auf kleineren Bildschirmen öffnet sie sich als Menü.
 
-## 🚀 Verwendete Technologien
+Technisch basiert das Projekt auf **Next.js 14**, **React 18**, **JavaScript (JSX)**, **Tailwind CSS** und **Lucide React**. Die Konfiguration erstellt einen statischen Export.
 
-- **Framework**: Next.js 14.2.0
-- **React**: 18.2.0
-- **Styling**: Tailwind CSS 3.4.17
-- **Icons**: Lucide React 0.544.0
-- **Sprache**: JavaScript (JSX)
-- **Schriftarten**: Google Fonts (Manrope, Albert Sans, DM Sans, Red Hat Display)
+## Lokal starten
 
-## 🛠️ Installation
-
-### Voraussetzungen
-
-- Node.js (Version 18+)
-- npm oder yarn
-
-### Installationsschritte
-
-1. **Projekt klonen**
-   ```bash
-   git clone <repository-url>
-   cd steinbeis-2
-   ```
-
-2. **Abhängigkeiten installieren**
-   ```bash
-   npm install
-   ```
-
-3. **Entwicklungsserver starten**
-   ```bash
-   npm run dev
-   ```
-
-4. **Im Browser öffnen**
-   ```
-   http://localhost:3001
-   ```
-
-## 📜 Verfügbare Skripte
+Voraussetzungen: Node.js 18 oder neuer und npm.
 
 ```bash
-npm run dev      # Startet den Entwicklungsserver auf Port 3001
-npm run build    # Erstellt eine optimierte Produktionsversion
-npm run start    # Startet den Produktionsserver
-npm run lint     # Prüft den Code mit ESLint
+git clone https://github.com/Jorxas/Steinbeis.git
+cd Steinbeis
+npm install
+npm run dev
 ```
 
-## 🎨 Funktionen
+Durch den in `next.config.mjs` voreingestellten Base Path ist die Seite lokal unter [http://localhost:3001/Steinbeis/](http://localhost:3001/Steinbeis/) erreichbar. Mit `npm run build` wird der statische Export erstellt. Für eine Bereitstellung unter einem anderen Pfad können `NEXT_PUBLIC_BASE_PATH` und `NEXT_PUBLIC_ASSET_PREFIX` gesetzt werden; die Standardkonfiguration ist auf `/Steinbeis` ausgelegt.
 
-### Responsive Navigation
-- **Desktop**: Horizontale Navigation mit Links und Kontakt-Button
-- **Mobile**: Hamburger-Menü mit Toggle (Menu ↔ X Icons)
-- **Smooth Scroll**: Sanftes Scrollen zu den Abschnitten
-- **Auto-Schließung**: Das mobile Menü schließt sich automatisch nach einem Klick
+## Aufbau
+
+- [`src/app/`](src/app/) — Seitenstruktur und Inhaltsabschnitte.
+- [`src/components/`](src/components/) — Navigation, Footer und wiederverwendbare UI.
+- [`public/`](public/) — Bilder und andere statische Dateien.
+
+Der Fokus des Projekts liegt auf einer klaren Präsentation der Inhalte und einem Layout, das auf unterschiedlichen Bildschirmgrößen funktioniert.
